@@ -2,10 +2,14 @@
   "name": "web-crawler",
   "version": "1.0.0",
   "description": "Web crawler JS/HTTP project",
+  "type": "module",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "transform": {}
   },
   "repository": {
     "type": "git",
@@ -20,7 +24,7 @@
   "devDependencies": {
     "jest": "^29.7.0"
   },
-  "jest": {
-    "transform": {}
+  "dependencies": {
+    "jsdom": "^24.1.1"
   }
 }
