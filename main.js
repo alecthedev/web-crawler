@@ -1,4 +1,5 @@
 import { crawlPage } from "./crawl.js";
+import { printReport } from "./report.js";
 
 async function main() {
   if (process.argv.length === 3) {
@@ -6,7 +7,7 @@ async function main() {
     console.log(`>> Running web crawler on ${baseURL} <<\n`);
 
     const pages = await crawlPage(baseURL);
-    console.log(pages);
+    printReport(pages);
   } else {
     throw new Error(
       `Invalid argument count.\nProgram usage: "npm run start <URL>"`,
